@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card {
+  box-shadow: 2px 2px 8px #0000004d;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.Card > section {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.Card > p {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.Card > div {
+  text-align: right;
+  padding: 10px;
+}
+
+.Card > div > button {
+  box-shadow: 2px 2px 8px #0000004d;
+  width: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+}
+
+.Quote {
+  margin: 10px;
+  width: 100%;
+}
