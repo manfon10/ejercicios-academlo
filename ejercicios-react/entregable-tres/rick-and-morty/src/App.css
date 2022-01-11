@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nunito:ital,wght@0,600;1,200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #2b201c;
+}
+
+.containerApp {
+  margin: 10px;
+}
+
+.LoaderApp {
+  background-image: url("./assets/img/portal-rick-and-morty.png");
+  background-repeat: no-repeat;
+}
+
+.SearchBox {
+  position: relative;
+}
+
+.SearchBox > input {
+  border: 5px solid #21130d;
+  border-radius: 1rem;
+  background-color: #2b201c;
+  color: white;
+  width: 100%;
+  height: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  padding: 5px;
+}
+
+.SearchBox > li {
+  background-color: #21130d;
+  color: white;
+  list-style: none;
+  padding: 5px;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+}
+
+.SearchBox > li:hover {
+  background-color: #2b201c;
+}
+
+.LocationInfo {
+  background-color: #21130d;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.LocationInfo > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.LocationInfo > div > p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  margin: 5px;
+}
+
+.ResidentList {
+  text-align: center;
+}
+
+.ResidentList > h1, .LocationInfo > h1 {
+  font-family: 'Anton', sans-serif;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.Pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Pagination > li {
+  margin: 5px;
+  padding: 20px;
+  text-decoration: none;
+  list-style: none;
+  background-color: #21130d;
+  color: white;
+  border-radius: 50px;
+}
+
+.Pagination > li:hover {
+  background-color: white;
+  color: #21130d;
+}
+
+.containerResidents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ResidentsContainer {
+  background-color: #21130d;
+  border-radius: 1rem;
+  margin: 5px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.ResidentsContainer > div {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.ResidentsContainer > p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+}
+
+.ResidentsContainer > img {
+  border-radius: 10rem;
+  width: 65%;
+  margin: 0px 15% 0px 15%;
+  position: relative;
+  bottom: 230px;
+  margin-bottom: -180px;
+}
+
+.ResidentsImage {
+  background-image: url("./assets/img/portal-rick-and-morty.png");
+  background-repeat: no-repeat;
+  background-size: 16rem;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  height: 260px;
+  margin: 0px 10% 0px 10%;
+  animation-name: roration;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.ResidentsImage > div {
+  margin: 10px;
+  text-align: center;
+}
+
+@keyframes roration {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
