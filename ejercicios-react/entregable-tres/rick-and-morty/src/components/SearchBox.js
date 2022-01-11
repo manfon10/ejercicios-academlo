@@ -13,8 +13,6 @@ const SearchBox = ({ setLocations, locations }) => {
     }
 
     const setLocationData = result => {
-        let input = document
-        
         setNameLocation("");
         setSearchResult({});
         setLocations(result);

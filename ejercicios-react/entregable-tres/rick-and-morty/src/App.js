@@ -8,42 +8,47 @@ import './App.css';
 function App() {
 
   const [ locations, setLocations ] = useState({});
-  const [ isLoading, setisLoading ] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(false);
 
   useEffect( async () => {
-    setisLoading(true);
+    setIsLoading(true);
     await axios.get(`https://rickandmortyapi.com/api/location/${getNumber}`)
       .then( response => {
         setLocations( response.data )
-        setisLoading(false);
+        setIsLoading(false)
       });
   }, []);
 
+  console.log(locations);
+
   return (
     <div className="containerApp">
-      <>
+      <div className="BackgroundHeader">
+        <h1>Rick and Morty API</h1>
+        <p>By Manuel Fonseca</p>
+      </div>
+        <SearchBox 
+          setLocations={setLocations}
+          locations={locations}
+        />
+        <LocationInfo 
+          name={locations.name}
+          type={locations.type}
+          dimension={locations.dimension}
+          residents={locations.residents?.length}
+        />
         {
           isLoading ? (
-            <div className="LoaderApp"></div>
+            <div className="LoaderApp">
+              <p></p>
+            </div>
           ) : (
-          <>
-            <SearchBox 
-              setLocations={setLocations}
-              locations={locations}
-            />
-            <LocationInfo 
-              name={locations.name}
-              type={locations.type}
-              dimension={locations.dimension}
-              residents={locations.residents?.length}
-            />
             <ResidenstList 
               locations={locations}
             />
-          </>
-        )
+          )
         }
-      </>
+
     </div>
   );
 }
