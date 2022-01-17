@@ -31,4 +31,8 @@
         src: './img/nubes-nubladas.gif',
         description: 'overcast clouds'
     },
+    {
+        src: './img/nubes-rotas.gif',
+        description: 'broken clouds'
+    },
 ];
