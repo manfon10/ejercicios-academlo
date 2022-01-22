@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans&display=swap');
+
+/*
+    font-family: 'Anton', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.Container {
+    padding: 10%;
+}
+
+.ContainerApp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 10px;
+}
+
+/* Apartado Usuarios */
+
+.ContainerUsers {
+    border-top: 1px solid #EAF2F8;
+    border-right: 1px solid #EAF2F8;
+    border-bottom: 1px solid #EAF2F8;
+    padding: 10px;
+}
+
+.UsersPost {
+    display: flex;
+    text-align: justify;
+    margin: 10px;
+    border: 1px solid #EAF2F8;
+}
+
+.UsersPost > div {
+    margin: 10px 50px 10px 10px;
+    width: 70%;
+}
+
+.UsersPost > div > p {
+    margin: 8px;
+}
+
+.ButtonEdit {
+    width: 40px;
+    height: 40px;
+    margin-top: 32px;
+    margin-right: 10px;
+    border: 1px solid #FDEDEC;
+    background-color: #D1F2EB;
+    cursor: pointer;
+    color: #1ABC9C;
+}
+
+.ButtonDelete {
+    width: 40px;
+    height: 40px;
+    margin-top: 32px;
+    border: 1px solid #FADBD8;
+    background-color: #FADBD8;
+    cursor: pointer;
+    color: #EC7063;
+}
+
+.Pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .Pagination > li {
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    list-style: none;
+    background-color: #EAF2F8;
+    border-radius: 1rem;
+    border: 1px solid #EAF2F8;
+  }
+  
+  .Pagination > li:hover {
+    background-color: white;
+    border: 1px solid #A9CCE3;
+    color: #21130d;
+  }
+
+/*-------------------------------------------------*/
+
+/* Apartado Formulario */
+
+.ContainerFormUsers {
+    background-color: #EAF2F8;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.UsersForm > input {
+    margin: 10px;
+    height: 50px;
+    padding: 10px;
+    width: 38.4%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #A9CCE3 ;
+}
+
+.UsersForm > p {
+    width: 50%;
+}
+
+.UsersForm > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UsersForm > div > input {
+    margin: 10px;
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #A9CCE3 ;
+}
+
+.UsersForm > div > input:focus::-webkit-input-placeholder, .UsersForm > input:focus::-webkit-input-placeholder {
+    font-size: 12px;
+    transform: scale(1) translateY(-15px);
+}
+
+.AlertForm > p{
+    margin: 5px;
+    color: #EC7063;
+}
+
+.UsersForm > button.ButtonUpload {
+    width: 30%;
+    margin: 10px;
+    height: 30px;
+    border: 1px solid #FDEDEC;
+    background-color: #D1F2EB ;
+    cursor: pointer;
+    color: #1ABC9C;
+}
+
+.UsersForm > button.ButtonUpload:hover, .ButtonEdit:hover {
+    border: 1px solid #1ABC9C;
+}
+
+.UsersForm > button.ButtonCancel {
+    width: 30%;
+    margin: 10px;
+    height: 30px;
+    border: 1px solid #FADBD8;
+    background-color: #FADBD8;
+    cursor: pointer;
+    color: #EC7063;
+}
+
+.UsersForm > button.ButtonCancel:hover, .ButtonDelete:hover {
+    border: 1px solid #EC7063;
+}
+
+@media only screen and ( min-width: 300px ) and (max-width: 767px) {
+    .ContainerApp {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin: 0px;
+    }
+
+    .Container {
+        padding: 0px;
+        margin: 10px;
+    }
+
+    .ContainerUsers {
+        padding: 0px;
+    }
+
+    .ContainerFormUsers {
+        padding: 5px;
+        margin: 0px;
+    }
+}
