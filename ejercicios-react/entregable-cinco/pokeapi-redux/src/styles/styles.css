@@ -1,0 +1,1252 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Apartado name user*/
+
+.NameUser {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NameUserBlack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NameUser > div {
+    text-align: center;
+}
+
+.NameUser > div > img{
+    width: 10rem;
+    animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.NameUserBlack > div {
+    text-align: center;
+}
+
+.NameUserBlack > div > img{
+    width: 10rem;
+}
+
+.NameUserBlack > div > img {
+    width: 10rem;
+    background-color: transparent;
+}
+
+.NameUser > div > h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.NameUserBlack > div > h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.NameUser > div > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.NameUserBlack > div > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.NameUser > div > form > p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.NameUserBlack > div > form > p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.NameUser > div > form > input {
+    border: 1px solid rgb(245, 20, 20);
+    height: 30px;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.NameUserBlack > div > form > input {
+    border: 1px solid rgb(245, 20, 20);
+    height: 30px;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.NameUser > div > form > input:focus::-webkit-input-placeholder {
+    font-size: 12px;
+    transform: scale(1) translateY(-8px)  translateX(5px);
+}
+
+.NameUserBlack > div > form > input:focus::-webkit-input-placeholder {
+    font-size: 12px;
+    transform: scale(1) translateY(-8px)  translateX(5px);
+}
+
+.NameUser > div > form > button {
+    width: 90px;
+    height: 25px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(245, 20, 20);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #9da5ac80;
+}
+
+.NameUserBlack > div > form > button {
+    width: 90px;
+    height: 25px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(245, 20, 20);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #9da5ac80;
+}
+
+/*---------------------*/
+
+/* Apartado datos usuario */
+
+.DateUser {
+    margin: 10px;
+    padding: 15px;
+}
+
+.DateUser > h1 {
+    font-size: 60px;
+}
+
+.DateUser > p {
+    font-size: 20px;
+}
+
+.DateUserBlack {
+    margin: 10px;
+    padding: 15px;
+}
+
+.DateUserBlack > h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.DateUserBlack > p {
+    color: white;
+    font-size: 20px;
+}
+
+/*---------------------------*/
+
+/* Apartado config */
+
+.BottonConfig {
+    position: relative;
+    top: -95px;
+    text-align: end;
+    margin-right: 50px;
+}
+
+/*------------------------*/
+
+/* Apartado de Search */
+
+.SearchBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.SearchBox > div {
+    margin: 10px;
+}
+
+.SearchBox > div > select, .SearchBox > div > input {
+    width: 20rem;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px #808b9683;
+}
+
+.SearchBox > div > select option {
+    font-weight: normal;
+}
+
+.SearchBox > div > input:focus::-webkit-input-placeholder {
+    font-size: 12px;
+    transform: scale(1) translateY(-10px);
+}
+
+/*-----------------------*/
+
+.ContainerList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Apartado de pokemon info */
+
+.ContainerPokemon { 
+    border: 1px solid #CCD1D1;
+    text-align: center;
+    width: 20%;
+    margin: 10px;
+    border-radius: 1rem;
+}
+
+.ContainerPokemon > a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Signika', sans-serif;
+}
+
+.ContainerInfo > img {
+    width: 100%;
+    height: 150px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.ContainerInfo > div.ImagePokemon {
+    position: relative;
+    top: -180px;
+    margin: 0px 0px -40px 0px;
+}
+
+.ContainerInfo > div.ImagePokemon > img {
+    width: 12rem;
+    height: 12rem;
+    background-color: white;
+    border-radius: 10rem;
+}
+
+.ContainerInfo > h2, .ContainerInfo > p {
+    font-family: 'Signika', sans-serif;
+    position: relative;
+    top: -110px;
+}
+
+.ContainerInfoBlack {
+    background: #808B96 ;
+    color: white;
+    text-align: center;
+    width: 20%;
+    margin: 10px;
+    border-radius: 1rem;
+}
+
+.ContainerInfoBlack > a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Signika', sans-serif;                 
+}
+
+.ContainerInfoBlack:hover {
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+}
+
+.ContainerPokemon:hover {
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+}
+
+.Paragraph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: -80px;
+}
+
+.Paragraph > p {
+    margin: 5px;
+    width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ButtonPokemon {
+    cursor: pointer;
+    width: 35%;
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid #0a66c2;
+    background: transparent;
+    border-radius: 1rem;
+    color: #0a66c2;
+    font-weight: bold;
+}
+
+.ButtonPokemon:hover {
+    background: #9dc9f588;
+}
+
+/*--------------------------------*/
+
+/* Apatado de pokemon detail */
+
+.ContainerPokemonDetail > h1 {
+    position: relative;
+    left: 15%;
+    top: 100px;
+    width: 180px;
+    font-size: 30px;
+}
+
+.ContainerPokemonDetailBlack > h1 {
+    position: relative;
+    color: white;
+    left: 15%;
+    top: 100px;
+    width: 180px;
+    font-size: 30px;
+}
+
+.ContainerPokemonDetail > p {
+    position: relative;
+    left: 85%;
+    top: 70px;
+    font-size: 30px;
+    width: 50px;
+}
+
+.ContainerPokemonDetailBlack > p {
+    position: relative;
+    color: white;
+    left: 85%;
+    top: 70px;
+    font-size: 30px;
+    width: 50px;
+}
+
+.ContainerPokemonDetail > button {
+    cursor: pointer;
+    position: relative;
+    left: 4%;
+    width: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.ContainerPokemonDetailBlack > button {
+    cursor: pointer;
+    position: relative;
+    left: 4%;
+    width: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.ContainerPokemonInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ImagePokemon {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.ImagePokemon > img {
+    margin-top: 100px;
+    width: 20rem;
+}
+
+.InfoPokemon {
+    display: flex;
+    position: relative;
+    top: 350px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem 2rem 0px 0px;
+    border: 1px solid #5a59597c ;
+    box-shadow: 2px 2px 2px 2px #808B96;
+    width: 80%;
+}
+
+.InfoPokemonBlack {
+    display: flex;
+    background-color: #808B96;
+    position: relative;
+    top: 350px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem 2rem 0px 0px;
+    border: 1px solid #5a59597c ;
+    box-shadow: 2px 2px 2px 2px #808B96;
+    width: 80%;
+}
+
+.InfoPokemon > div, .InfoPokemonBlack > div {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    height: 50%;
+}
+
+.PokemonInfoStats {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+}
+
+.PokemonInfoStats > div {
+    border: 1px solid #5a59597c ;
+    box-shadow: 1px 1px 1px 1px #808b96b6;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.PokemonInfoMovents {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 10px;
+}
+
+.PokemonInfoMovents > div {
+    margin-top: 4px;
+    height: 50%;
+    overflow-y: scroll;
+    height: 515px;
+    padding: 10px 0px 10px 10px;
+    text-align: center;
+    border: none;
+    border: 1px solid #5a59597c ;
+    box-shadow: 1px 1px 1px 1px #808b96b6;
+    background-color: #e4e7e9c6;
+    border-radius: 5px;
+}
+
+.PokemonInfoMoventsBlack > div {
+    color: white;
+    margin-top: 4px;
+    height: 50%;
+    overflow-y: scroll;
+    height: 515px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border: 1px solid #5a59597c ;
+    box-shadow: 1px 1px 1px 1px #808b96b6;
+    border-radius: 5px;
+}
+
+.PokemonInfoMoventsBlack > div::-webkit-scrollbar, .PokemonInfoMovents > div::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.PokemonInfoMovents > div > h1, .PokemonInfoMoventsBlack > div > h1 {
+    width: 100%;
+}
+
+.PokemonInfoMovents > div > p, .PokemonInfoMoventsBlack > div > p {
+    font-size: 20px;
+    margin: 5px;
+    border-bottom: 1px solid #5a59597c;
+}
+
+.AboutPokemon {
+    background-color: #e4e7e9c6;
+}
+
+.AboutPokemon > div{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 15px;
+    height: 50%;
+}
+
+.AboutPokemonBlack, .StatsProgressBlack, .ParagraphDetailBlack, .PokemonInfoMoventsBlack {
+    color: white;
+    background-color: #566573;
+}
+
+.AboutPokemonBlack > div {
+    color: white;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 15px;
+    height: 50%;
+}
+
+.StatsProgress {
+    background-color: #e4e7e9c6;
+}
+
+.StatsProgress > div, .StatsProgressBlack > div {
+    display: grid;
+    grid-template-columns: 30% 10% 60%;
+    padding: 18px;
+    height: 50%;
+}
+
+.StatsProgress > div > progress, .StatsProgressBlack > div > progress {
+    width: 100%;
+}
+
+.ParagraphDetail {
+    background-color: #e4e7e9c6;
+}
+
+.ParagraphDetail > h1, .StatsProgress > h1, .AboutPokemon > h1 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.ParagraphDetailBlack > h1, .StatsProgressBlack > h1, .AboutPokemonBlack > h1 {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.ParagraphDetail > div, .ParagraphDetailBlack > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.ParagraphDetail > div > p {
+    margin: 20px;
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.ParagraphDetailBlack > div > p {
+    color: white;
+    margin: 20px;
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*-----------------------*/
+
+/* Apartado de paginacion */
+
+.Pagination {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 30px;
+    justify-content: center;
+}
+
+.Pagination > ul {
+    white-space: nowrap;
+    overflow: auto;
+    width: 100%;
+}
+
+.pagesReplies {
+    border-radius: 5rem;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #acd1ed;
+    list-style: none;
+    margin: 5px;
+    display: inline-block;
+    clear: both;
+}
+
+.pagesRepliesBlack {
+    border-radius: 5rem;
+    cursor: pointer;
+    color: black;
+    padding: 1rem;
+    background-color: #edf2f5;
+    list-style: none;
+    margin: 5px;
+    display: inline-block;
+    clear: both;
+}
+
+.pagesReplies:hover {
+    background-color: white;
+    color: black;
+}
+
+.pagesRepliesBlack:hover {
+    background-color: #808B96;
+    color: white;
+}
+
+/* ------------------------- */
+
+/* Apartado de configuracion */
+
+.ContainerConfig {
+    padding: 50px;
+}
+
+.ContainerConfig > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerConfig > section > div {
+    text-align: center;
+}
+
+.ContainerConfig > section > div > select {
+    height: 30px;
+    font: 20px;
+    margin: 20px;
+    border: none;
+    font-size: 15px;
+    pad: 5px;
+}
+
+.ContainerConfig > section > div > select:focus {
+    outline: none;
+}
+
+.ContainerConfigBlack {
+    padding: 50px;
+    color: white;
+}
+
+.ContainerConfigBlack > h1, .ContainerConfig > h1 {
+    position: relative;
+    left: 5%;
+    width: 20%;
+    margin: 10px;
+}
+
+.ContainerConfigBlack > button, .ContainerConfig > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.ContainerConfigBlack > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.ContainerConfigBlack > section > div {
+    text-align: center;
+}
+
+.ContainerConfigBlack > section > div > h2 {
+    margin: 5px;
+}
+
+.ContainerConfigBlack > section > div > select {
+    height: 30px;
+    font: 20px;
+    margin: 20px;
+    border: none;
+    font-size: 15px;
+    pad: 5px;
+}
+
+.ContainerConfigBlack > section > div > select:focus {
+    outline: none;
+}
+
+/* ---------------------------- */
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+
+    .NameUser {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .NameUser > div {
+        text-align: center;
+    }
+
+    .NameUser > div > img{
+        width: 10rem;
+    }
+
+    .NameUser > div > h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+
+    }
+
+    .NameUser > div > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .NameUser > div > form > p {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+    }
+
+    .NameUser > div > form > input {
+        border: 1px solid rgb(245, 20, 20);
+        height: 30px;
+        padding: 5px;
+        border-radius: 1rem;
+    }
+
+    .NameUser > div > form > input:focus::-webkit-input-placeholder {
+        font-size: 12px;
+        transform: scale(1) translateY(-8px)  translateX(5px);
+    }
+
+    .NameUser > div > form > button {
+        width: 90px;
+        height: 25px;
+        margin: 10px;
+        border: none;
+        background-color: rgb(245, 20, 20);
+        color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px #9da5ac80;
+    }
+
+    .BottonConfig {
+        position: relative;
+        top: -120px;
+        text-align: end;
+        margin-right: 20px;
+    }
+
+    .SearchBox {
+        margin-bottom: 50px;
+        margin-top: -30px;
+    }
+
+    .SearchBox > div > select, .SearchBox > div > input {
+        width: 20rem;
+        height: 30px;
+        font-size: 16px;
+        padding: 5px;
+        border: none;
+        box-shadow: 1px 1px 1px 1px #808b9683;
+
+    }
+ 
+    .ContainerList {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ContainerInfoBlack, .ContainerPokemon {
+        width: auto;
+        height: 300px;
+    }
+
+    .ContainerInfo > img {
+        height: 90px;
+    }
+
+    .ContainerInfo > h2, .ContainerInfo > p {
+        font-family: 'Signika', sans-serif;
+        position: relative;
+        top: -75px;
+    }
+
+    .ContainerInfo > div.ImagePokemon {
+        position: relative;
+        top: -140px;
+        bottom: -50px;
+    }
+
+    .ContainerInfo > div.ImagePokemon > img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .Paragraph {
+        position: relative;
+        top: 15px;
+    }
+
+    .Pagination {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        margin: 10px;
+        justify-content: center;
+    }
+    
+    .Pagination > ul {
+        white-space: nowrap;
+        overflow: auto;
+        width: 100%;
+    }
+    
+    .pagesReplies {
+        border-radius: 5rem;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #acd1ed;
+        list-style: none;
+        margin: 2px;
+        display: inline-block;
+        clear: both;
+    }
+    
+    .pagesRepliesBlack {
+        border-radius: 5rem;
+        cursor: pointer;
+        color: black;
+        padding: 10px;
+        background-color: #edf2f5;
+        list-style: none;
+        margin: 2px;
+        display: inline-block;
+        clear: both;
+    }
+    
+    .pagesReplies:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    .pagesRepliesBlack:hover {
+        background-color: #808B96;
+        color: white;
+    }
+
+    /* detail pokemon*/
+
+    .ContainerPokemonDetail > h1 {
+        position: relative;
+        left: 32%;
+        top: 50px;
+        width: 180px;
+        font-size: 30px;
+    }
+    
+    .ContainerPokemonDetail > p {
+        position: relative;
+        left: 46%;
+        bottom: 20px;
+        font-size: 30px;
+        width: 50px;
+    }
+    
+    .ContainerPokemonDetail > button {
+        position: relative;
+        left: 1%;
+        top: -50px;
+        width: 60px;
+        border: none;
+        background-color: transparent;
+    }
+
+    .ContainerPokemonDetailBlack > h1 {
+        position: relative;
+        left: 32%;
+        top: 50px;
+        width: 180px;
+        font-size: 30px;
+        color: white;
+    }
+    
+    .ContainerPokemonDetailBlack > p {
+        position: relative;
+        left: 46%;
+        bottom: -50px;
+        font-size: 30px;
+        width: 50px;
+        color: white;
+    }
+    
+    .ContainerPokemonDetailBlack > button {
+        position: relative;
+        left: 1%;
+        top: -50px;
+        width: 60px;
+        border: none;
+        background-color: transparent;
+    }
+
+    .ImagePokemon {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .ImagePokemon > img {
+        margin-top: 85px;
+        width: 8.5rem;
+    }
+
+    .InfoPokemon {
+        display: flex;
+        position: relative;
+        background-color: #bdc0c4;
+        top: 210px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem 2rem 0px 0px;
+        border: 1px solid #5a59597c ;
+        box-shadow: 2px 2px 2px 2px #808B96;
+        width: 100%;
+    }
+    
+    .InfoPokemon > div, .InfoPokemonBlack > div {
+        margin-top: 30px;
+    }
+
+    .InfoPokemonBlack {
+        display: flex;
+        position: relative;
+        background-color: #808B96;
+        top: 210px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem 2rem 0px 0px;
+        border: 1px solid #5a59597c ;
+        box-shadow: 2px 2px 2px 2px #808B96;
+        width: 100%;
+    }
+
+    .PokemonInfoStats {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+    }
+    
+    .PokemonInfoStats > div {
+        border: 1px solid #5a59597c ;
+        box-shadow: 1px 1px 1px 1px #808b96b6;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    
+    .PokemonInfoMovents {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 5px;
+        
+    }
+    
+    .PokemonInfoMovents > div {
+        margin-top: 4px;
+        height: 50%;
+        overflow-y: scroll;
+        height: 610px;
+        padding: 5px;
+        text-align: center;
+        border: none;
+        border: 1px solid #5a59597c ;
+        box-shadow: 1px 1px 1px 1px #808b96b6;
+        background-color: #e4e7e9c6;
+        border-radius: 5px;
+    }
+    
+    .PokemonInfoMovents > div > p {
+        font-size: 15px;
+        margin: 5px;
+        border-bottom: 1px solid #5a59597c;
+    }
+
+    .AboutPokemon, .StatsProgress, .ParagraphDetail {
+        position: relative;
+        top: -55px;
+    }
+
+    .AboutPokemonBlack, .StatsProgressBlack, .ParagraphDetailBlack {
+        position: relative;
+        top: -55px;
+    }
+    
+    .AboutPokemon > div {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        height: 50%;
+    }
+
+    .AboutPokemon > div > p {
+        font-size: 12px;
+    }
+
+    .AboutPokemonBlack > div {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        height: 50%;
+        padding: 5px;
+        background-color: #566573 ;
+    }
+
+    .AboutPokemonBlack > h1 {
+        text-align: center;
+        background-color: #566573 ;
+        color: white;
+    }
+
+    .AboutPokemonBlack > div > p {
+        font-size: 12px;
+        color: white;
+    }
+    
+    .StatsProgress > div {
+        display: grid;
+        grid-template-columns: 30% 10% 60%;
+        padding: 15px;
+        height: 50%;
+    }
+
+    .StatsProgress > div > p {
+        font-size: 12px;
+    }
+    
+    .StatsProgress > div > progress {
+        width: 100%;
+    }
+
+    .StatsProgressBlack > div {
+        display: grid;
+        grid-template-columns: 30% 10% 60%;
+        background-color: #566573 ;
+        padding: 15px;
+        height: 50%;
+    }
+
+    .StatsProgressBlack > h1 {
+        text-align: center;
+        background-color: #566573 ;
+        color: white;
+    }
+
+    .StatsProgressBlack > div > p {
+        font-size: 12px;
+        color: white;
+    }
+    
+    .StatsProgressBlack > div > progress {
+        width: 100%;
+    }
+    
+    .ParagraphDetail > h1, .StatsProgress > h1, .AboutPokemon > h1 {
+        text-align: center;
+        margin-top: 5px;
+    }
+    
+    .ParagraphDetail > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .ParagraphDetail > div > p {
+        margin: 10px;
+        width: 40%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .ParagraphDetailBlack > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #566573 ;
+        text-align: center;
+    }
+
+    .ParagraphDetailBlack > h1 {
+        text-align: center;
+        background-color: #566573 ;
+        color: white;
+    }
+    
+    .ParagraphDetailBlack > div > p {
+        margin: 10px;
+        width: 40%;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .PokemonInfoMoventsBlack {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 5px;
+    }
+    
+    .PokemonInfoMoventsBlack > div {
+        margin-top: 4px;
+        height: 50%;
+        overflow-y: scroll;
+        height: 610px;
+        padding: 5px;
+        text-align: center;
+        border: none;
+        border: 1px solid #5a59597c ;
+        box-shadow: 1px 1px 1px 1px #808b96b6;
+        background-color: #566573 ;
+        border-radius: 5px;
+    }
+
+    .PokemonInfoMoventsBlack > div > h1 {
+        color: white;
+    }
+    
+    .PokemonInfoMoventsBlack > div > p {
+        font-size: 15px;
+        margin: 5px;
+        border-bottom: 1px solid #5a59597c;
+        color: white;
+    }
+
+    /* Apartado config */
+
+    .ContainerConfig {
+        padding: 10px 10px 10px 10px;
+    }
+    
+    .ContainerConfig > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ContainerConfig > section > div {
+        text-align: center;
+    }
+    
+    .ContainerConfig > section > div > select {
+        height: 30px;
+        font: 20px;
+        margin: 20px;
+        border: none;
+        font-size: 15px;
+        padding: 5px;
+    }
+    
+    .ContainerConfig > section > div > select:focus {
+        outline: none;
+    }
+    
+    .ContainerConfigBlack {
+        padding: 10px;
+        color: white;
+    }
+    
+    .ContainerConfigBlack > h1, .ContainerConfig > h1 {
+        position: relative;
+        left: 5%;
+        width: 70%;
+        margin: 15px;
+    }
+    
+    .ContainerConfigBlack > button, .ContainerConfig > button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+    }
+    
+    .ContainerConfigBlack > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    .ContainerConfigBlack > section > div {
+        text-align: center;
+    }
+    
+    .ContainerConfig > section > div > h2, .ContainerConfigBlack > section > div > h2 {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .ContainerConfigBlack > section > div > select {
+        height: 30px;
+        font: 20px;
+        margin: 20px;
+        border: none;
+        font-size: 15px;
+        pad: 5px;
+    }
+    
+    .ContainerConfigBlack > section > div > select:focus {
+        outline: none;
+    }
+
+    /* ------------------*/
+
+}
