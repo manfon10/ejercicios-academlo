@@ -1,6 +1,7 @@
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft, faAngleRight, faHome } from '@fortawesome/free-solid-svg-icons';
+import Button from './Button';
 
 const Card = ({ quote, author, background, changeQuote }) => {
 
@@ -9,7 +10,11 @@ const Card = ({ quote, author, background, changeQuote }) => {
         <div className="Card">
             <section>
                 <div className="IconCard">
-                    <FontAwesomeIcon icon={faQuoteLeft} size="3x" style={{ color: background }} />
+                    <FontAwesomeIcon 
+                        icon={faQuoteLeft} 
+                        size="3x" 
+                        style={{ color: background }} 
+                    />
                 </div>
                 <div className="Quote">
                     <p style={{ color: background }}>{ quote }</p>
@@ -17,9 +22,10 @@ const Card = ({ quote, author, background, changeQuote }) => {
             </section>
             <p style={{ color: background }}>{ author }</p>
             <div>
-                <button onClick={changeQuote} style={{ background: background }} >
-                    <FontAwesomeIcon icon={faAngleRight} size="2x" />
-                </button>
+                <Button 
+                    background={background} 
+                    changeQuote={changeQuote}
+                />
             </div>
         </div>
 

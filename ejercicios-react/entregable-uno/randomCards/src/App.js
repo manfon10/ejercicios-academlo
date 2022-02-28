@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Data from './data/qoutes.json';
+import Data from './data/quotes.json';
 import Card from './components/Card';
 import Colors from './components/Colors';
 
@@ -13,8 +13,6 @@ function App() {
     const index = getNumber(Data.length);
     setQuote(Data[index]);
   }
-
-  console.log(background);
 
   document.body.style = `background: ${background}`;
 
