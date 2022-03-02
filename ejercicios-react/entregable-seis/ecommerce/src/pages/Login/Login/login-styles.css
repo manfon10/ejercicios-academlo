@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.ContainerLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerButtonsLogin {
+    text-align: center;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.ContainerButtonsLogin > button {
+    background-color: #faf7f2;
+    margin: 10px;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #6f5d44;
+    cursor: pointer;
+}
+
+.ContainerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #faf7f2;
+    width: 500px;
+    padding: 20px;
+}
+
+.ContainerLogin  > P {
+    margin: 20px;
+}
+
+.ContainerLogin > form {
+    width: 80%;
+    text-align: center;
+}
+
+.ContainerLogin > form > div > p {
+    text-align: left;
+    margin-left: 35px;
+    width: 50px;
+    font-size: 12px;
+}
+
+.ContainerLogin > form > div input {
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+}
+
+.ButtonLogin {
+    width: 50%;
+    padding: 6px;
+    border: none;
+    background-color: #6f5d44;
+    color: white;
+}
+
+.AlertsLogin {
+    margin-top: 10px;
+}
+
+.AlertsLogin > div {
+    margin: 5px;
+}
+
+.ContainerTestAccount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.ContainerTestAccount > p {
+    margin: 10px;
+}

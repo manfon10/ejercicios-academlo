@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+
+.OrdersContainer > h2 {
+    margin-bottom: 30px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.OrdersContainer > table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.ItemOrder {
+    text-align: center;
+}

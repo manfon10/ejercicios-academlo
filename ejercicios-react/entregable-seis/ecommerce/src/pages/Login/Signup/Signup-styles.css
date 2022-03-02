@@ -1,0 +1,71 @@
+.ContainerSignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #faf7f2;
+    width: 500px;
+    padding: 20px;
+}
+
+.NamesForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.NamesForm > div {
+    width: 50%;
+    padding: 10px 10px 10px 10px;
+}
+
+.NamesForm > div > input {
+    width: 100%;
+    padding: 10px;
+}
+
+.NamesForm > div > p {
+    width: 50%;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.ContainerSignup > P {
+    margin: 10px;
+}
+
+.ContainerSignup > form {
+    width: 100%;
+    padding: 10px;
+}
+
+.ContainerSignup > form > div {
+    width: 100%;
+}
+
+.ContainerSignup > form > div > p {
+    text-align: left;
+    margin-left: 20px;
+    width: 300px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.ContainerSignup > form > div.DatesForm {
+    padding: 10px;
+}
+
+.ContainerSignup > form > div.DatesForm input {
+    width: 100%;
+    padding: 10px;
+}
+
+.ButtonLogin {
+    width: 50%;
+    padding: 6px;
+    border: none;
+    background-color: #6f5d44;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}

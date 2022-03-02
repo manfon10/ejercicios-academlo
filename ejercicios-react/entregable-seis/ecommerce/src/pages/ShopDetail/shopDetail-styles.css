@@ -1,0 +1,120 @@
+
+
+.ContainerProductDetail {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.ContainerProductDetail > section {
+    width: 50%;
+}
+
+.ImagesCarrucel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: -40px;
+}
+
+.ImagesCarrucel > div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.ImagesCarrucel > div > div > img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.ImagesCarrucel > label > img {
+    width: 80%;
+}
+
+.ProductoInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 25px;
+}
+
+.ProductoInfo > p {
+    white-space: pre-wrap;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.8em;
+    text-transform: none;
+    letter-spacing: 0em;
+    font-size: 1rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.ProductoInfo > form {
+    width: 100%;
+    text-align: left;
+}
+
+.ProductoInfo > form > input {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: left;
+    width: 100px;
+}
+
+.ProductoInfo > form > button {
+    width: 100%;
+    background-color: #b9b8b4;
+    color: white;
+    border: none;
+    margin-top: 50px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.ProductoInfo > form > button:hover {
+    background-color: #d0ceca;
+}
+
+.AlertAddCart {
+    position: fixed;
+    right: 20px;
+    top: 50px;
+}
+
+.ProductsCategory > h1 {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.ContainerProductsCategory {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0,1fr));
+    grid-column-gap: 2vw;
+    grid-row-gap: 4vw;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.ContainerProductsCategory > a > div > img {
+    width: 100%;
+}
+
+.ContainerProductsCategory > a {
+    text-decoration: none;
+}
+
+.ContainerProductsCategory > a > div > div > p {
+    margin-top: 10px;
+    color: black;
+}

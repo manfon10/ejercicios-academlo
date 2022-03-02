@@ -1,0 +1,14 @@
+.ItemsFilter > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ItemsFilter > ul > li {
+    list-style: none;
+    font-family: 'Fira Sans', sans-serif;
+    border-right: 1px solid #ceb891b6;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}

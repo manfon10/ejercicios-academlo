@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main > h2 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.UserForm > div {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+}
+
+.UserForm > div > h3 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.UserForm > div > p {
+    margin: 10px;
+    font-size: 12px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.UserForm > div > button {
+    position: relative;
+    right: -95%;
+    top: -80px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    color: #6f5d44;
+    background-color: transparent;
+    font-family: 'Fira Sans', sans-serif;
+}

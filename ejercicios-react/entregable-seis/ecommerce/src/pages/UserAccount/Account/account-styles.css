@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.AcountInfo {
+    margin: 10px 10% 0px 10%;
+}
+
+.AcountInfo > p {
+    font-size: 20px;
+}
+
+.ContainerAccount {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.ContainerAccount > div.ItemMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #faf7f2;
+}
+
+.ContainerAccount > div.ItemMenu > p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.ContainerAccount > div.ItemMenu > button {
+    margin: 10px;
+    cursor: pointer;
+    width: 90%;
+    border-radius: 1rem;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    background-color: white;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.ContainerAccount > div.ItemMenu > button:hover {
+    background-color: #f2eadf;
+    transition: 1s;
+}
+
+.ContainerAccount > div.ItemForms {
+    height: 800px;
+    overflow-y: scroll;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-left: 20px;
+    border-radius: 1rem;
+    padding: 20px;
+    background-color: #faf7f2;
+}
+
+.ContainerAccount > div.ItemForms::-webkit-scrollbar {
+    width: 10px;
+}

@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.ContainerFormEdit {
+    text-align: center;
+}
+
+.ContainerInputsName {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ContainerInputsName > div {
+    width: 50%;
+}
+
+.ContainerInputsName > div > p, .ContainerInputMail > div > p {
+    color: #6f5d44;
+    text-align: left;
+    margin: 10px 10px 10px 50px;
+}
+
+.ContainerInputsName > div > input {
+    margin: 10px;
+    height: 35px;
+    padding: 10px;
+    width: 80%;
+    background-color: #faf7f2;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #6f5d44;
+    font-size: 16px;
+}
+
+.ContainerInputMail > div > input {
+    margin: 10px;
+    height: 35px;
+    padding: 10px;
+    width: 90%;
+    background-color: #faf7f2;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #6f5d44;
+    font-size: 16px;
+}
+
+.ContainerFormEdit > form > button {
+    margin: 20px;
+    width: 15%;
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}

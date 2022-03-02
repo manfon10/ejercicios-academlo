@@ -1,0 +1,13 @@
+export { default as About } from './About/About';
+export { default as Account } from './UserAccount/Account/Account';
+export { default as UserAccount } from './UserAccount/UserAccount/UserAccount';
+export { default as UserAccountEdit } from './UserAccount/UserAccountEdit/UserAccountEdit';
+export { default as Orders } from './UserAccount/UserOrders/Orders';
+export { default as Beginning } from './beginningPage/Beginning';
+export { default as Cart } from './Cart/Cart';
+export { default as Contact } from './Contact/Contac';
+export { default as Menu } from './Login/Menu/Menu';
+export { default as Login } from './Login/Login/Login';
+export { default as Signup } from './Login/Signup/Signup';
+export { default as Shop } from './Shop/Shop';
+export { default as ShopDetail } from './ShopDetail/ShopDetail';

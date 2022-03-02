@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+.SearchBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.SearchBox > form > input {
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    border: 1px solid #ceb891b6;
+    font-size: 15px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.SearchBox > form > input:focus::-webkit-input-placeholder {
+    color: #ceb891;
+    font-size: 12px;
+    transform: scale(1) translateY(-12px)  translateX(0px);
+}
