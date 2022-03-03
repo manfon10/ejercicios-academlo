@@ -69,3 +69,19 @@
 .ContainerAccount > div.ItemForms::-webkit-scrollbar {
     width: 10px;
 }
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+    .ContainerAccount {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ItemMenu {
+        margin-bottom: 20px;
+    }
+
+    .ContainerAccount > div.ItemForms {
+        height: auto;
+        margin: 0;
+    }
+}

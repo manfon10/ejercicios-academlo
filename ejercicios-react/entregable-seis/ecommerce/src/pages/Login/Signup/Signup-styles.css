@@ -69,3 +69,23 @@
     margin-top: 10px;
     cursor: pointer;
 }
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+    .ContainerSignup {
+        width: 80%;
+        padding: 5px;
+    }
+
+    .ContainerSignup > form {
+        padding: none;
+    }
+
+    .NamesForm > div > p {
+        width: 100%;
+        margin-left: -1px;
+    }
+
+    .ContainerSignup > form > div > p {
+        margin-left: -1px;
+    }
+}

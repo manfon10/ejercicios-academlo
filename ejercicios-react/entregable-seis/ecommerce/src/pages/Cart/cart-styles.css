@@ -115,3 +115,34 @@
     font-size: 20px;
     font-family: 'Fira Sans', sans-serif;
 }
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+    .Container > h2 {
+        margin: 0 0 0 20px;
+    }
+
+    .CartItemContainer > table {
+        width: 100%;
+        margin: 20px;
+        font-size: 13px;
+    }
+
+    .ItemImage {
+        margin: 5px;
+    }
+
+    .ItemImage > img {
+        width: 40%;
+    }
+
+    .ItemPrice > p {
+        font-size: 13px;
+    }
+
+    .CartItemCartVacuum {
+        text-align: center;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

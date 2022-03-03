@@ -91,3 +91,20 @@
 .ContainerTestAccount > p {
     margin: 10px;
 }
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+    .ContainerLogin {
+        width: 80%;
+    }
+
+    .ContainerButtonsLogin {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .ContainerButtonsLogin > button {
+        width: 140px;
+    }
+}

@@ -40,3 +40,15 @@ main > h2 {
     background-color: transparent;
     font-family: 'Fira Sans', sans-serif;
 }
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+    .UserForm > div {
+        padding: 10px;
+    }
+
+    .UserForm > div > button {
+        right: 0;
+        top: 0;
+        left: 40%;
+    }
+}

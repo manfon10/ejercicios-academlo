@@ -58,3 +58,22 @@
     border: none;
     cursor: pointer;
 }
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+    .ContainerInputsName > div > p {
+        margin: 10px 10px 10px 15px;
+    }
+
+    .ContainerInputMail > div > p {
+        margin: 10px 10px 10px 15px;
+    }
+
+    .ContainerInputsName > div > input, .ContainerInputMail > div > input {
+        font-size: 13px;
+    }
+
+    .ContainerFormEdit > form > button {
+        margin: 10px;
+        width: 40%;
+    }
+}
