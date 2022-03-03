@@ -1,0 +1,29 @@
+.ContainerFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.ContainerFooter > article {
+    margin: 20px;
+}
+
+.ContainerFooter > article > input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.ContainerFooter > article > button {
+    padding: 10px;
+    border: none;
+    background-color: #b9b8b4;
+    color: white;
+    cursor: pointer;
+}
+
+.ContainerFooter > article > p > a {
+    color: black;
+}

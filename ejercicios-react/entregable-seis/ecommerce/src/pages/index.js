@@ -11,3 +11,4 @@ export { default as Login } from './Login/Login/Login';
 export { default as Signup } from './Login/Signup/Signup';
 export { default as Shop } from './Shop/Shop';
 export { default as ShopDetail } from './ShopDetail/ShopDetail';
+export { default as FooterApp } from './Footer/Footer';

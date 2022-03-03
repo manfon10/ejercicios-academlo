@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar } from '.';
+import { FooterApp } from '../pages';
 import { Outlet } from 'react-router-dom';
 
 const MainLayaout = () => {
@@ -7,6 +8,7 @@ const MainLayaout = () => {
         <div>
             <Navbar />
             <Outlet />
+            <FooterApp />
         </div>
     );
 };

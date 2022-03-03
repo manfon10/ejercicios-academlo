@@ -20,9 +20,11 @@ const ShopDetail = () => {
 
     const { register, handleSubmit } = useForm();
 
-    const [ url, setUrl ] = useState(productDetail?.images?.map( url => {
-        return url.url;
-    }));
+    const [ url, setUrl ] = useState("");
+
+    useEffect( () => {
+        setUrl(productDetail?.images?.[0]?.url);
+    }, [productDetail]);
 
     useEffect(() => {
         dispatch(getProductDetailThunk(id))
