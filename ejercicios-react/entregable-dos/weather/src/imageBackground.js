@@ -1,4 +1,4 @@
- export const background = [
+export const background = [
     {
         src: "./img/sol-y-nubes.gif",
         description: 'few clouds'
@@ -34,5 +34,13 @@
     {
         src: './img/nubes-rotas.gif',
         description: 'broken clouds'
+    },
+    {
+        src: "./img/lluvia-moderada.gif",
+        description: 'moderate rain'
+    },
+    {
+        src: './img/lluvia-ligera.gif',
+        description: 'light rain'
     },
 ];
