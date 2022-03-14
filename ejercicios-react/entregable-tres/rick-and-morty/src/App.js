@@ -19,8 +19,6 @@ function App() {
       });
   }, []);
 
-  console.log(locations);
-
   return (
     <div className="containerApp">
       <div className="BackgroundHeader">

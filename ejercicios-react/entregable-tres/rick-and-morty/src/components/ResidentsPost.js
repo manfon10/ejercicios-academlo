@@ -14,20 +14,22 @@ const ResidentsPost = ({ residents }) => {
     
     return (
         <div className="ResidentsContainer">
-            <div>
+            <div className="ResidentsTitle">
                 <p>{post.name}</p>
             </div>
             <div className="ResidentsImage"></div>
             <img src={post.image} alt={post.name} />
-            {
-                post.status == "Dead" ? (
-                    <p><FontAwesomeIcon icon={faCircle} color="red"/> {post.status} - {post.species}</p>
-                ) : (
-                    <p><FontAwesomeIcon icon={faCircle} color="green"/> {post.status} - {post.species}</p>
-                )
-            }
-            <p><b>Origin:</b> {post.origin?.name}</p>
-            <p><b>Episodes:</b> {post.episode?.map( data => data.slice(40, ).concat(" "))} </p>
+            <div className="ResidentsInfo">
+                {
+                    post.status == "Dead" ? (
+                        <p><FontAwesomeIcon icon={faCircle} color="red"/> {post.status} - {post.species}</p>
+                    ) : (
+                        <p><FontAwesomeIcon icon={faCircle} color="green"/> {post.status} - {post.species}</p>
+                    )
+                }
+                <p><strong>Origin:</strong> {post.origin?.name}</p>
+                <p><strong>Episodes:</strong> {post.episode?.map( data => data.slice(40, ).concat(" "))} </p>
+            </div>
         </div>
     );
 };

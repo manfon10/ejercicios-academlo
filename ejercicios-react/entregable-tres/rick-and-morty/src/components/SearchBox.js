@@ -20,12 +20,14 @@ const SearchBox = ({ setLocations, locations }) => {
 
     return (
         <div className="SearchBox">
-            <input type="text" value={nameLocation} onChange={ (e) => getLocation(e) } placeholder="Find location"/>
-            {
-                searchResult.results?.map( result => (
-                    <li key={result.id} onClick={ () => setLocationData(result)}> { result.name } </li>
-                ))
-            }
+            <input type="text" value={nameLocation} onChange={ (e) => getLocation(e) } placeholder="Find by location"/>
+                <div className="SearchBoxResult">
+                    {
+                        searchResult.results?.map( result => (
+                            <li key={result.id} onClick={ () => setLocationData(result)}> { result.name } </li>
+                        ))
+                    }
+                </div>
         </div>
     );
 };
