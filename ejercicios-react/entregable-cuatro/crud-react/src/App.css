@@ -32,6 +32,7 @@
     border-right: 1px solid #EAF2F8;
     border-bottom: 1px solid #EAF2F8;
     padding: 10px;
+    height: 550px;
 }
 
 .UsersPost {
@@ -104,6 +105,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 550px;
 }
 
 .UsersForm > input {
