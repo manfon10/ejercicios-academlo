@@ -29,7 +29,7 @@ const PokedexDetail = () => {
 
     return (
         <section className={ mode ? 'ContainerPokemonDetailBlack' : 'ContainerPokemonDetail'}>
-            <h1>{ pokemon?.forms?.[0]?.name } {pokemon?.order}</h1>
+            <h1>{ pokemon?.forms?.[0]?.name }</h1>
             <p><strong>{`#${pokemon?.order}`}</strong></p>
             <button onClick={ () => navigate("/pokedex")}> <FontAwesomeIcon icon={faArrowLeft} size="2x" color={mode ? 'white' : 'black'}/></button>
             <div className="ContainerPokemonInfo">

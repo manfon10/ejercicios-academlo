@@ -20,15 +20,25 @@ const Pokedex = () => {
 
     document.body.style = `background: ${ mode ? '#566573' : '#ECF0F1' }`;
 
-    const [ currentPage, setCurrentPage ] = useState(1);
-    const [ postsPerPage ] = useState(pagina);
+    const [ currentPage, setCurrentPage ] = useState(0);
+    const [ postsPerPage ] = useState(Number(pagina));
 
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPokemons = getPokemonsResult?.slice(currentPage, currentPage + postsPerPage);
 
-    const currentPokemons = getPokemonsResult?.slice(indexOfFirstPost, indexOfLastPost);
+    const prevPage = () => {
+        if(currentPage > 0) {
+            setCurrentPage(currentPage - postsPerPage);
+        }
+    }
 
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const nextPage = () => {
+        if(getPokemonsResult.length > currentPage + postsPerPage) {
+            setCurrentPage(postsPerPage + currentPage);
+        }
+    }
+
+    console.log(currentPage)
+    console.log(postsPerPage)
 
     useEffect( () => {
         dispatch(getPokemons());
@@ -47,11 +57,13 @@ const Pokedex = () => {
                 </Link>
             </div>
             <SearchBox />
-            <PokedexList pokemons={currentPokemons} />
+            <PokedexList 
+                pokemons={currentPokemons} 
+            />
             <Pagination
-                postsPerPage={postsPerPage} 
-                totalPosts={getPokemonsResult?.length}
-                paginate={paginate}
+                prevPage={prevPage}
+                nextPage={nextPage}
+                currentPage={currentPage}
             />
         </main>
     );
