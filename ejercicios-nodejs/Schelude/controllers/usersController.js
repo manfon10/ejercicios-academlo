@@ -1,107 +1,67 @@
+// Models
 const { User } = require('../models/userModel');
+const { Repair } = require('../models/repairModel');
 
-const getAllUsers = async (req, res) => {
-    try {
-        // findAll -> SELECT * FROM Users;
-        const users = await User.findAll();
+// Utils
+const { catchAsync } = require('../utils/catchAsync');
 
-        res.status(200).json({ users });
-
-    } catch (error) {
-        console.log(error)
-    }
-} 
-
-const createUser = async (req, res) => {
-    try {
-        const { name, email, password, role } = req.body;
-
-        const validateEmail = await User.findOne({
-            where: { email }
-        });
-
-        if(validateEmail) {
-            return res.status(400).json({
-                status: 'error',
-                message: 'Email duplicated!!'
-            })
+const getAllUsers = catchAsync(async (req, res) => {
+    const users = await User.findAll({
+        attributes: ['id', 'name', 'email', 'role', 'status'],
+        include: {
+            model: Repair,
+            attributes: ['id', 'date', 'userId']
         }
+    });
 
-        const newUser = await User.create({
-            name,
-            email,
-            password,
-            role
-        });
-    
-        res.status(201).json({ newUser });
+    res.status(200).json({ users });
+});
 
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-const getUserById = async (req, res) => {
-    try {
-        const { id } = req.params;
-
-        const user = await User.findOne({
-            where: { id }
-        });
-
-        if(!user) {
-            return res.status(404).json({
-                status: 'error',
-                message: 'User not found given that id'
-            });
-        }
-
-        res.status(200).json({ user });
+const createUser = catchAsync(async (req, res) => {
         
-    } catch (error) {
-        console.log(error);
-    }
-}
+    const { name, email, password, role } = req.body;
 
-const updateUser = async (req, res) => {
-    try {
-        const { id } = req.params;
+    const newUser = await User.create({
+        name,
+        email,
+        password,
+        role
+    });
 
-        const { name, email } = req.body;
+    res.status(201).json({ newUser });
 
-        await User.update({ name, email }, { where: { id } });
+});
 
-        res.status(201).json({ status: 'success' });
+const getUserById = catchAsync(async (req, res) => {
 
-    } catch (error) {
-        console.log(error)
-    }
-}
+    const { user } = req;
 
-const deleteUser = async (req, res) => {
-    try {
-        const { id } = req.params;
+    res.status(200).json({ user });
+        
+});
 
-        const { status } = req.body;
+const updateUser = catchAsync(async (req, res) => {
 
-        const validateStatus = await User.findOne({
-            where: { id}
-        });
+    const { id } = req.params;
 
-        if(validateStatus) {
-            return res.status(400).json({
-                status: 'error',
-                message: 'User is already deleted!!'
-            })
-        }
+    const { name, email } = req.body;
 
-        await User.update({ status }, { where: { id }});
+    await User.update({ name, email }, { where: { id } });
 
-        res.status(201).json({ status: 'success' });
+    res.status(201).json({ status: 'success' });
 
-    } catch (error) {
-        console.log(error);
-    }
-}
+});
+
+const deleteUser = catchAsync(async (req, res) => {
+
+    const { id } = req.params;
+
+    const { status } = req.body;
+
+    await User.update({ status }, { where: { id }});
+
+    res.status(201).json({ status: 'success' });
+
+});
 
 module.exports = { getAllUsers, createUser, getUserById, updateUser, deleteUser };
