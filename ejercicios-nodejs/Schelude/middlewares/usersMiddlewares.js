@@ -1,32 +1,84 @@
+const jwt = require('jsonwebtoken');
+const process = require('dotenv').config();
+
+// Models
+
 const { User } = require('../models/userModel');
 
-const userExists = async (req, res, next) => {
-    try {
+// Utils
 
-        const { id } = req.params;
+const { catchAsync } = require('../utils/catchAsync');
+const { AppError } = require('../utils/appError');
 
-        const user = await User.findOne({
-            where: { id }
-        });
+const protectToken = catchAsync( async (req, res, next) => {
 
-        if(!user) {
-            return res.status(404).json({
-                status: 'error',
-                message: 'User not found given that id'
-            });
-        }
+    let token;
 
-        req.user = user;
+    // Extract token from headers
 
-        next();
-
-    } catch (error) {
-        console.log(error);
+    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+        token = req.headers.authorization.split(' ')[1];
     }
-}
 
-const statusExists = async (req, res, next) => {
-    try {
+    if(!token) {
+        return next(new AppError('Session invalid', 403));
+    }
+
+    // Validate Token
+
+    const decoded = await jwt.verify(token, process.parsed.JWT_SECRET);
+
+    const user = await User.findOne({
+        where: { id: decoded.id, status: 'available' }
+    });
+
+    if(!user) {
+        return next(new AppError('The owner of this token is no longer available', 403));
+    }
+
+    req.sessionUser = user;
+
+    next();
+
+});
+
+const protectAccountOwner = catchAsync( async (req, res, next) => {
+
+    // Get current session user
+
+    const { sessionUser, user } = req;
+
+    // Get the id of the user that is going to be updated
+
+    // Compare the id's
+
+    if(sessionUser.id !== user.id) {
+        return next(new AppError('You do not have permission to edit that account', 404));
+    }
+
+    next();
+
+});
+
+const userExists = catchAsync(async (req, res, next) => {
+
+    const { id } = req.params;
+
+    const user = await User.findOne({
+        where: { id }
+    });
+
+    if(!user) {
+        return next(new AppError('User does not exist with given Id', 404));
+    }
+
+    req.user = user;
+
+    next();
+
+});
+
+const statusExists = catchAsync( async (req, res, next) => {
 
         const { id } = req.params;
         
@@ -37,21 +89,14 @@ const statusExists = async (req, res, next) => {
         });
 
         if(validateStatus) {
-            return res.status(404).json({
-                status: 'error',
-                message: 'User is already deleted!!'
-            })
+            return next(new AppError('User is already deleted!!', 404));
         }
 
         next();
 
-    } catch (error) {
-        console.log(error);
-    }
-}
+});
 
-const emailExists = async (req, res, next) => {
-    try {
+const emailExists = catchAsync( async (req, res, next) => {
         
         const { email } = req.body;
 
@@ -60,17 +105,11 @@ const emailExists = async (req, res, next) => {
         });
 
         if(validateEmail) {
-            return res.status(400).json({
-                status: 'error',
-                message: 'Email duplicated!!'
-            });
+            return next(new AppError('Email duplicated!!', 404));
         }
 
         next();
 
-    } catch (error) {
-        console.log(error);
-    }
-}
+});
 
-module.exports = { userExists, statusExists, emailExists };
+module.exports = { protectToken, protectAccountOwner, userExists, statusExists, emailExists };
