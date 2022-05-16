@@ -1,18 +1,29 @@
 const express = require('express');
 
 // Middlewares
-const { userExists, statusExists, emailExists } = require('../middlewares/usersMiddlewares');
+const { userExists, protectAccountOwner, statusExists, emailExists, protectToken } = require('../middlewares/usersMiddlewares');
 const { createUserValidation, checkValidations } = require('../middlewares/fieldsMiddlewares');
 
 // Controllers
-const { getAllUsers, createUser, getUserById, updateUser, deleteUser } = require('../controllers/usersController');
+const { getAllUsers, createUser, getUserById, updateUser, deleteUser, login } = require('../controllers/usersController');
 
 const router = express.Router();
 
-router.get('/', getAllUsers);
-router.get('/:id', userExists, getUserById);
+// Routes free
+
 router.post('/', createUserValidation, checkValidations, emailExists, createUser);
-router.patch('/:id', userExists, updateUser);
-router.delete('/:id', statusExists, deleteUser);
+router.post('/login', login);
+
+// Routes protected
+
+router.use(protectToken);
+
+router.get('/', getAllUsers);
+router.get('/:id', userExists, getUserById)
+
+// protected Account Owner
+
+router.patch('/:id', userExists, protectAccountOwner, updateUser);
+router.delete('/:id', statusExists, protectAccountOwner, deleteUser);
 
 module.exports = { usersRouter: router };
