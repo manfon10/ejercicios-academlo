@@ -46,15 +46,13 @@ const protectAccountOwner = catchAsync( async (req, res, next) => {
 
     // Get current session user
 
-    const currentSession = req.sessionUser;
+    const { sessionUser, user } = req;
 
     // Get the id of the user that is going to be updated
 
-    const { id } = req.params;
-
     // Compare the id's
 
-    if(currentSession.id !== parseInt(id)) {
+    if(sessionUser.id !== user.id) {
         return next(new AppError('You do not have permission to edit that account', 404));
     }
 
