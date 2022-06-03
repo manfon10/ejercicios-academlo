@@ -21,7 +21,7 @@ router.use(protectToken);
 
 router.post('/add-product', validateUserCart, createCart, validateQuantity, addProductToCart);
 
-router.patch('/update-cart', validateUserCart, validateQuantity, updateProductInCart);
+router.patch('/update-cart', validateUserCart, updateProductInCart);
 
 router.post('/purchase', validateUserCart, validateProductsToPurchase, purchaseCart);
 

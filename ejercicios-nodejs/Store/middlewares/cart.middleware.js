@@ -13,6 +13,9 @@ const validateUserCart = catchAsync(async (req, res, next) => {
     const cart = await Cart.findOne({ where: { userId: sessionUser.id, status: 'active' } });
 
     if(!cart) {
+
+        req.cart = cart;
+
         return next();
     }
 
@@ -25,6 +28,8 @@ const validateUserCart = catchAsync(async (req, res, next) => {
             return next();
 
         }
+
+    next();
 
 });
 
@@ -65,13 +70,13 @@ const validateProductsToPurchase = catchAsync(async (req, res, next) => {
 
     const { cart } = req;
 
-    const products = await ProductInCart.findAll({ where: { cartId: cart.id, status: 'active' } });
+        const products = await ProductInCart.findAll({ where: { cartId: cart.id, status: 'active' } });
 
-    if(!products) {
-        return next(new AppError('It does not have products in the cart', 404));
-    }
+        if(Object.keys(products).length === 0) {
+            return next(new AppError('It does not have products in the cart', 404));
+        }
 
-    req.products = products;
+        req.products = products;
 
     next();
 

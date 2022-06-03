@@ -17,10 +17,6 @@ const getAllProducts = catchAsync(async (req, res) => {
       {
         model: Category,
         attributes: ['name']
-      },
-      {
-        model: ProductImg,
-        attributes: ['imgUrl']
       }
     ],
   });
@@ -37,7 +33,7 @@ const getAllProducts = catchAsync(async (req, res) => {
 
   const productsResolved = await Promise.all(productsPromises);
 
-  res.status(200).json({ products: productsResolved });
+  res.status(200).json({ products });
 
 });
 
@@ -86,7 +82,7 @@ const createProduct = catchAsync(async (req, res) => {
 
   await Promise.all(imagesProductsPromise);
 
-  res.status(201).json({ newProduct });
+  res.status(201).json({ product });
 
 });
 

@@ -26,12 +26,12 @@ const updateProductInCart = catchAsync(async (req, res) => {
   const { productId, newQuantity } = req.body;
 
   if(newQuantity === 0) {
-    await ProductInCart.update({ status: 'removed' }, { where: { productId, cartId: cart.id } });
+    await ProductInCart.update({ status: 'removed' }, { where: { id: productId } });
   }else {
-    await ProductInCart.update({ status: 'active' }, { where: { productId, cartId: cart.id } });
+    await ProductInCart.update({ status: 'active' }, { where: { id: productId } });
   }
 
-  await ProductInCart.update({ quantity: newQuantity }, { where: { productId } });
+  await ProductInCart.update({ quantity: newQuantity }, { where: { id: productId } });
   
   res.status(201).json({ status: 'success' });
 
@@ -43,17 +43,27 @@ const purchaseCart = catchAsync(async (req, res, next) => {
 
   products.map(async ({ productId, quantity }) => {
     
-    await Product.update({ quantity }, { where: { id: productId } });
+    // Update quantity product to purchase
 
     const product = await Product.findOne({ where: { id: productId } });
+
+    const newQuantity = product.quantity - quantity;
+
+    await Product.update({ quantity: newQuantity }, { where: { id: productId } });
+
+    // Mark produtcs to purchase and calculate total price
  
-    await ProductInCart.update({ status: 'purchased' }, { where: { cartId: cart.id } });
+    await ProductInCart.update({ status: 'purchased' }, { where: { cartId: cart.id, status: 'active' } });
 
     const totalPrice = product.price * quantity;
+
+    // Create Order
 
     await Order.create({ userId: sessionUser.id, cartId: cart.id, totalPrice });
 
   });
+
+  // Update cart to status purchased
 
   await Cart.update({ status: 'purchased' }, { where: { id: cart.id } });
   
@@ -65,9 +75,7 @@ const removeProductFromCart = catchAsync(async (req, res) => {
 
   const { productId } = req.params;
 
-  const { status } = req.body;
-
-  await ProductInCart.update({ status }, { where: { productId } });
+  await ProductInCart.update({ status: 'removed' }, { where: { id: productId } });
 
   res.status(201).json({ status: 'success' });
 

@@ -7,9 +7,9 @@ const createCategory = catchAsync(async (req, res) => {
 
     const { name } = req.body;
 
-    await Category.create({ name });
+    const category = await Category.create({ name });
 
-    res.status(201).json({ status: 'success' });
+    res.status(201).json({ category });
 
 });
 
